@@ -22,16 +22,77 @@
               </v-app-bar>
             </v-col>
             <v-col cols="12" sm="12">
-              <v-card class="mx-12 rounded-tl-xl rounded-tr-xl rounded-bl-xl rounded-bl-xl rounded-br-xl mt-n15"></v-card>
+              <v-card class="mx-12 rounded-tl-xl rounded-tr-xl rounded-bl-xl rounded-bl-xl rounded-br-xl mt-n15">
+                <v-list-item three-line>
+                  <v-list-item-content class="pa-10">
+                    <v-list-item-title class="headline mb-1">
+                      today<span class="teal--text">-10%</span>discount<br>
+                    on lung examinations
+                    </v-list-item-title>
+                    <v-list-item-subtitle>
+                      The package price includes: consultation<br>
+                      of a pulmonologist, spirography, cardiogram <span class="teal--text"></span>
+                    </v-list-item-subtitle>
+                  </v-list-item-content>
+                  <v-list-item-avatar tile size="150" class="pr-10">
+                    <img src="lungs.png" alt="">
+                  </v-list-item-avatar>
+                </v-list-item>
+              </v-card>
+            </v-col>
+            <v-col cols="12" sm="12">
+              <v-card class="mx-12 rounded-tl-xl rounded-tr-xl rounded-bl-xl rounded-br-xl mt-n10">
+                <v-app-bar color="rgba(0,0,0,0)" flat class="ma-8">
+                  <h5>Statistics of your health</h5>
+                  <v-spacer></v-spacer>
+                  <v-btn color="teal" text>
+                    2019
+                    <v-icon right>mdi-chevron-down</v-icon>
+                  </v-btn>
+                  <v-btn color="teal" rounded dark depressed>Year</v-btn>
+                  <v-btn text>Month</v-btn>
+                </v-app-bar>
+                <template>
+                  <v-sparkline
+                  :value="value"
+                  color="teal"
+                  :smooth="radius || false"
+                  :padding="padding"
+                  :line-width="width"
+                  :stroke-linecap="lineCap"
+                  :fill="fill"
+                  :type="type"
+                  :auto-line-width="autoLineWidth"
+                  auto-draw
+                  >
+                  </v-sparkline>
+                </template> 
+              </v-card>
+            </v-col>
+            <v-col cols="12" sm="6">
+              <v-card class="mx-12" rounded-tr-xl rounded-bl-xl rounded-br-xl mt-n4 color="teal" dark>
+                <v-list-item three-line>
+                  <v-list-item-content class="pa-2">
+                    <v-list-item-content class="pa-2">
+                      <v-list-item-title class="headline mb-1">
+                        Heart rate <br>
+                        <h2>112 bpm</h2>
+                      </v-list-item-title>
+                    </v-list-item-content>
+                    <v-list-item-avatar
+                    tile
+                    size="150"
+                    class="pr-10"
+                    >
+                    <v-icon size="100">fas fa-heartbeat</v-icon>
+                    </v-list-item-avatar>
+                  </v-list-item-content>
+                </v-list-item>
+              </v-card>
             </v-col>
           </v-row>
         </v-container>
       </v-app>
-      <!-- <v-flex md4>
-        <v-app :style="{background: $vuetify.theme.themes.light.background}">
-        
-        </v-app>
-      </v-flex> -->
     </v-flex>
   </v-layout>
   </v-app>

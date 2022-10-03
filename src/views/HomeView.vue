@@ -26,7 +26,7 @@
                 <v-list-item three-line>
                   <v-list-item-content class="pa-10">
                     <v-list-item-title class="headline mb-1">
-                      today<span class="teal--text">-10%</span>discount<br>
+                      Today<span class="teal--text">-10%</span>discount<br>
                     on lung examinations
                     </v-list-item-title>
                     <v-list-item-subtitle>
@@ -70,28 +70,204 @@
               </v-card>
             </v-col>
             <v-col cols="12" sm="6">
-              <v-card class="mx-12" rounded-tr-xl rounded-bl-xl rounded-br-xl mt-n4 color="teal" dark>
+              <v-card class="mx-12 rounded-tl-xl rounded-tr-xl rounded-bl-xl rounded-br-xl mt-n4" color="teal" dark>
                 <v-list-item three-line>
                   <v-list-item-content class="pa-2">
-                    <v-list-item-content class="pa-2">
+                    
                       <v-list-item-title class="headline mb-1">
                         Heart rate <br>
-                        <h2>112 bpm</h2>
+                        <h2 class="pr-lg-10">112 bpm</h2>
                       </v-list-item-title>
                     </v-list-item-content>
+                   
                     <v-list-item-avatar
                     tile
                     size="150"
                     class="pr-10"
                     >
                     <v-icon size="100">fas fa-heartbeat</v-icon>
-                    </v-list-item-avatar>
-                  </v-list-item-content>
+                  </v-list-item-avatar>
                 </v-list-item>
+              </v-card>
+            </v-col>
+            <v-col cols="12" sm="6">
+              <v-card class="mx-12 rounded-tl-xl rounded-tr-xl rounded-bl-xl rounded-br-xl mt-n12">
+                <v-app-bar color="rgba(0,0,0,0)" flat class="ma-8">
+                  <h5>Your activity</h5>
+                  <v-spacer></v-spacer>
+                  <v-btn color="teal" rounded dark depressed>Week</v-btn>
+                    <v-btn text>Month</v-btn>
+                </v-app-bar>
+                <v-progress-circular rotate="360" size="100" width="15" value="50" color="teal" class="mt-n5 ml-5 mb-2">
+                50
+                </v-progress-circular>
+                <v-progress-circular rotate="360" size="100" width="15" value="70" color="red" class="mt-n5 ml-5 mb-2">
+                70
+                </v-progress-circular>
+                <v-progress-circular rotate="360" size="100" width="15" value="80" color="blue" class="mt-n5 ml-5 mb-2">
+                80
+                </v-progress-circular>
               </v-card>
             </v-col>
           </v-row>
         </v-container>
+      </v-app>
+    </v-flex>
+    <v-flex md4>
+      <v-app :style="{background: $vuetify.theme.themes.light.background}">
+      <v-container>
+        <v-row>
+          <v-col cols="12" sm="12">
+            <v-list two-line>
+              <v-list-item>
+                <v-list-item-avatar>
+                  <img src="https://cdn.vuetifyjs.com/images/lists/3.jpg">
+                </v-list-item-avatar>
+                <v-list-item-content>
+                  <v-list-item-title>
+                    Anastasia Turner
+                  </v-list-item-title>
+                  <v-list-item-subtitle class="teal--text">
+                    35 years, Houston
+                  </v-list-item-subtitle>
+                </v-list-item-content>
+                <v-space></v-space>
+                <v-icon color="teal">mdi-menu</v-icon>
+              </v-list-item>
+
+            </v-list>
+          </v-col>
+          <v-col sols="12" md="4">
+            <v-row>
+              <v-col cols="12" md="2">
+                <v-card height="50px" width="10px" color="green"></v-card>
+              </v-col>
+              <v-col cols="12" md="10">
+                <v-list two-line subheader class="ml-n8">
+                  <v-list-item>
+                    <v-list-content>
+                      <v-list-item-subtitle>Blood</v-list-item-subtitle>
+                      <v-list-item-title>A+</v-list-item-title>
+                    </v-list-content>
+                  </v-list-item>
+                </v-list>
+              </v-col>
+            </v-row>
+          </v-col>
+          <v-col sols="12" md="4">
+            <v-row>
+              <v-col cols="12" md="2">
+                <v-card height="50px" width="10px" color="red"></v-card>
+              </v-col>
+              <v-col cols="12" md="10">
+                <v-list two-line subheader class="ml-n8">
+                  <v-list-item>
+                    <v-list-content>
+                      <v-list-item-subtitle>Height</v-list-item-subtitle>
+                      <v-list-item-title>175 cm</v-list-item-title>
+                    </v-list-content>
+                  </v-list-item>
+                </v-list>
+              </v-col>
+            </v-row>
+          </v-col>
+          <v-col sols="12" md="4">
+            <v-row>
+              <v-col cols="12" md="2">
+                <v-card height="50px" width="10px" color="grey"></v-card>
+              </v-col>
+              <v-col cols="12" md="10">
+                <v-list two-line subheader class="ml-n8">
+                  <v-list-item>
+                    <v-list-content>
+                      <v-list-item-subtitle>Weight</v-list-item-subtitle>
+                      <v-list-item-title>64 kg</v-list-item-title>
+                    </v-list-content>
+                  </v-list-item>
+                </v-list>
+              </v-col>
+            </v-row>
+          </v-col>
+          <v-col cols="12" sm="12">
+            <v-btn text>November<v-icon right>mdi-chevron-down</v-icon></v-btn>
+          </v-col>
+          <v-col cols="12" sm="12">
+            <v-list>
+              <v-list-item>
+                <v-list-item-content>
+                  <v-btn class="mr-1" outlined color="teal darken-1">Mo</v-btn>
+                </v-list-item-content>
+                <v-list-item-content>
+                  <v-btn class="mr-1" outlined color="teal darken-1">Tu</v-btn>
+                </v-list-item-content>
+                <v-list-item-content>
+                  <v-btn class="mr-1" outlined color="teal darken-1">We</v-btn>
+                </v-list-item-content>
+                <v-list-item-content>
+                  <v-btn class="mr-1" color="teal darken-1" dark>Th</v-btn>
+                </v-list-item-content>
+                <v-list-item-content>
+                  <v-btn class="mr-1" outlined color="teal darken-1">Fr</v-btn>
+                </v-list-item-content>
+                <v-list-item-content>
+                  <v-btn class="mr-1" outlined color="teal darken-1">Sa</v-btn>
+                </v-list-item-content>
+              </v-list-item>
+            </v-list>
+          </v-col>
+          <V-col cols="12" sm="12">
+            <v-card class="mx-12 rounded-tl-xl rounded-bl-xl rounded-br-xl mt-n4 py-4" color="teal" dark flat>
+              <v-list-item three-line>
+                <v-list-item-avatar tile size="30">
+                  <v-icon size="30">mdi-tooth</v-icon>
+                </v-list-item-avatar>
+                <v-list-item-content class="pa-2">
+                  <v-list-item-title class="headline mb-1">
+                    Dentist<br>
+                    <h6>8:00 - 9:30</h6>
+                    <h6>Dr. Alex Brown(cab 39)</h6>
+                  </v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+            </v-card>
+          </v-col>
+          <v-col cols="12" sm="12">
+            <v-card class="mx-12 rounded-tr-xl rounded-bl-xl rounded-br-xl mt-n4 py-4" color="teal lighten-5" flat>
+              <v-list-item three-line>
+                <v-list-item-avatar tile size="30">
+                  <v-icon size="30">fas fa-heartbeat</v-icon>
+                </v-list-item-avatar>
+                <v-list-iitem-content class="pa-2">
+                  <v-list-class-item-title class="headline mb-1">   
+                    Cardiologist <br>
+                    <h6>9:45 - 11:50</h6>
+                    <h6>Dr. Elka Clark(cab 61)</h6>
+                  </v-list-class-item-title>
+                </v-list-iitem-content>
+              </v-list-item>
+            </v-card>
+          </v-col>
+          <v-col cols="12" sm="12">
+            <v-btn text>Your Traitment</v-btn>
+            <v-icon>mdi-chevron-down</v-icon>
+          </v-col>
+          <v-col cols="12" sm="12">
+            <v-card class="mx-12 rounded-tl-xl rounded-tr-xl rounded-bl-xl rounded-br-xl mt-n4" color="teal lighten-5" flat>
+              <v-list-item three-line>
+                <v-list-item-avatar tile size="30">
+                  <v-icon size="30" color="teal">mdi-pill</v-icon>
+                </v-list-item-avatar>
+                <v-list-item-content class="pa-2">
+                  <v-list-item-title class="headline mb-1">
+                    Gentle Iron<br>
+                    <h6><span class="teal--text">2 capsules</span>with meals</h6>
+                  </v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
       </v-app>
     </v-flex>
   </v-layout>
